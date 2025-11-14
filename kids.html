@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="kids.css">
+</head>
+<body>
+   <nav class="miras">
+    <h1>Miras</h1>
+    <a href="/index.html"><li>Home</li></a>
+    <a href="/men.html"><li>Men</li></a>
+    <a href="/women.html"><li>Women</li></a>
+    <a href="/kids.html"><li class="active">Kids</li></a>
+    <a href="#"><li>Props</li></a>
+    <a href="#"><li>Training</li></a>
+</nav>
+
+<!-- Hamburger menu for mobile -->
+<button class="hamburger" onclick="toggleMenu()">☰</button>
+
+<!-- Side navigation -->
+<div class="side-nav" id="sideNav">
+    <a href="/index.html">Home</a>
+    <a href="/men.html">Men</a>
+    <a href="/women.html">Women</a>
+    <a href="/kids.html">Kids</a>
+    <a href="#">Props</a>
+    <a href="#">Training</a>
+</div>
+
+<!-- Overlay for closing menu -->
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <section id="shirt" class="category">
+        <h2>Shirt</h2>
+        <div class="slider-container">
+            <button class="prev">Prev</button>
+            <button class="next">Next</button>
+            <div class="boxes">
+                <div class="box"><img src="/image/kids/IMG_5036.jpg"     alt="shirt 1"><p>Shirt 1 <br>price: 50 $</p></div>
+                <div class="box"><img src="/image/kids/IMG_5055.JPG.jpg" alt="Shirt 2"><p>Shirt 2 <br>price: 50 $</p></div>
+                <div class="box"><img src="/image/kids/IMG_5054.JPG.jpg" alt="Shirt 3"><p>Shirt 3 <br>price: 50 $</p></div>
+                <div class="box"><img src="/image/kids/IMG_5044.jpg"     alt="Shirt 4"><p>Shirt 4 <br>price: 50 $</p></div>
+                <div class="box"><img src="/IMG_0532.JPG - Shortcut.lnk"   alt="Shirt 5"><p>Shirt 5 <br>price: 50 $</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Gown&shorts" class="category">
+        <h2>Gown&Shorts</h2>
+        <div class="slider-container">
+            <button class="prev">Prev</button>
+            <button class="next">Next</button>
+            <div class="boxes">
+                <div class="box"><img src="/image/kids/IMG_4768.jpg"     alt="Gown&shorts 1"><p>Gown&shorts 1 <br>price: 50 $</p></div>
+                <div class="box"><img src="/image/kids/IMG_5049.JPG.jpg" alt="Gown&shorts 2"><p>Gown&shorts 2 <br>price: 50 $</p></div>
+                <div class="box"><img src="/image/kids/IMG_5037.JPG.jpg" alt="Gown&shorts 3"><p>Gown&shorts 3 <br>price: 50 $</p></div>
+                <div class="box"><img src="/image/kids/IMG_5047.JPG.jpg" alt="Gown&shorts 4"><p>Gown&shorts 4 <br>price: 50 $</p></div>
+                <div class="box"><img src="/image/kids/IMG_4767.jpg"     alt="Gown&shorts 5"><p>Gown&shorts 5 <br>price: 50 $</p></div>
+                <div class="box"><img src="/image/kids/IMG_5044 2.jpg"   alt="Gown&shorts 6"><p>Gown&shorts 6 <br>price: 50 $</p></div>
+                <div class="box"><img src="/image/kids/IMG_5042.JPG.jpg" alt="Gown&shorts 7"><p>Gown&shorts 7 <br>price: 50 $</p></div>
+                <div class="box"><img src="/image/kids/IMG_5056.JPG.jpg" alt="Gown&shorts 8"><p>Gown&shorts 8 <br>price: 50 $</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Two-Piece" class="category">
+        <h2>Two-piece</h2>
+        <div class="slider-container">
+            <button class="prev">Prev</button>
+            <button class="next">Next</button>
+            <div class="boxes">
+                <div class="box"><img src="/image/kids/IMG_5041.JPG.jpg" alt="Two-piece 1"><p>Two-piece 1 <br>price: 50 $</p></div>
+                <div class="box"><img src="/image/kids/IMG_5042.JPG.jpg" alt="Two-piece 2"><p>Two-piece 2 <br>price: 50 $</p></div>
+                <div class="box"><img src="/image/kids/IMG_5053.JPG.jpg" alt="Two-piece 3"><p>Two-piece 3 <br>price: 50 $</p></div>
+                <div class="box"><img src="/image/kids/IMG_5050.JPG.jpg" alt="Two-piece 4"><p>Two-piece 4 <br>price: 50 $</p></div>
+                <div class="box"><img src="/image/kids/IMG_5056.JPG.jpg" alt="Two-piece 5"><p>Two-piece 5 <br>price: 50 $</p></div>
+                <div class="box"><img src="/image/kids/IMG_5047.JPG.jpg" alt="Two-piece 6"><p>Two-piece 6 <br>price: 50 $</p></div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sliderContainers = document.querySelectorAll('.slider-container');
+
+            sliderContainers.forEach(container => {
+                const boxes = container.querySelector('.boxes');
+                const prevBtn = container.querySelector('.prev');
+                const nextBtn = container.querySelector('.next');
+                const boxWidth = container.querySelector('.box').offsetWidth + 20; // width + margin
+                let currentIndex = 0;
+                const totalBoxes = boxes.children.length;
+                const visibleBoxes = 4; // assuming 4 boxes visible
+                const maxIndex = totalBoxes - visibleBoxes;
+
+                nextBtn.addEventListener('click', () => {
+                    if (currentIndex < maxIndex) {
+                        currentIndex++;
+                        boxes.style.transform = `translateX(-${currentIndex * boxWidth}px)`;
+                    }
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        boxes.style.transform = `translateX(-${currentIndex * boxWidth}px)`;
+                    }
+                });
+            });
+        });
+    </script>
+
+<script>
+function toggleMenu() {
+    const sideNav = document.getElementById('sideNav');
+    const overlay = document.getElementById('overlay');
+    sideNav.classList.toggle('open');
+    overlay.classList.toggle('active');
+}
+
+function closeMenu() {
+    const sideNav = document.getElementById('sideNav');
+    const overlay = document.getElementById('overlay');
+    sideNav.classList.remove('open');
+    overlay.classList.remove('active');
+}
+</script>
+
+</body>
+</html>

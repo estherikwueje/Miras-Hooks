@@ -10,6 +10,8 @@ html {
 }
  body{
     background-color: snow;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    color: #333;
  }
 
 li{
@@ -17,21 +19,22 @@ li{
 }
 
 .miras{
-    z-index: 9;
+    z-index: 999;
     position: fixed;
-    background-color: rgba(255, 250, 250, 0.793);
+    background-color: rgba(255, 250, 250, 0.95);
     justify-content: space-around;
     align-items: center;
     list-style: none;
     display: flex;
     width: 100%;
-    height: 50px;
-    top: -50px;
+    height: 60px;
+    top: 0;
+    left: 0;
+    padding: 0 1rem;
     font-style: italic;
-    font-weight: bolder;
+    font-weight: 700;
     color: brown;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    animation: klo 1s forwards;    
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 @keyframes klo {
@@ -55,6 +58,35 @@ li{
     background-image: url('IMG-20251015-WA0004.jpg');
     background-size: cover;
     background-position: center;
+}
+
+/* Hero section (used across pages) */
+.hero{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+.hero-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.hero-title{
+    position: absolute;
+    left: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 10;
+    background: rgba(0, 123, 255, 0.18);
+    color: #003366;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+.hero-title h1{
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 1.05;
 }
 
 .slider-container {
@@ -300,15 +332,8 @@ cursor: pointer;
         margin-bottom: 10px;
     }
 
-    .text {
-        font-size: 3rem;
-        position: absolute;
-        top: 8%;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        animation: slide 1s forwards;
-    }
+    .hero{ height: 40vh; }
+    .hero-title h1{ font-size: 1.8rem; }
 
     @keyframes slide {
         100% {

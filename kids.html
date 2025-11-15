@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="kids.css">
+    <link rel="preload" as="image" href="/image/kids/1763145765250.jpg">
 </head>
 <body>
    <nav class="miras">
@@ -33,17 +34,22 @@
 <!-- Overlay for closing menu -->
 <div class="overlay" id="overlay" onclick="closeMenu()"></div>
 
+    <header class="hero">
+        <img loading="lazy" decoding="async" class="hero-img" src="/image/kids/1763145765250.jpg" alt="Kids clothes hero image">
+        <div class="hero-title"><h1>Kids<br>Clothes</h1></div>
+    </header>
+    <main>
     <section id="shirt" class="category">
         <h2>Shirt</h2>
         <div class="slider-container">
             <button class="prev">Prev</button>
             <button class="next">Next</button>
             <div class="boxes">
-                <div class="box"><img src="/image/kids/IMG_5036.jpg"     alt="shirt 1"><p>Shirt 1 <br>price: 50 $</p></div>
-                <div class="box"><img src="/image/kids/IMG_5055.JPG.jpg" alt="Shirt 2"><p>Shirt 2 <br>price: 50 $</p></div>
-                <div class="box"><img src="/image/kids/IMG_5054.JPG.jpg" alt="Shirt 3"><p>Shirt 3 <br>price: 50 $</p></div>
-                <div class="box"><img src="/image/kids/IMG_5044.jpg"     alt="Shirt 4"><p>Shirt 4 <br>price: 50 $</p></div>
-                <div class="box"><img src="/IMG_0532.JPG - Shortcut.lnk"   alt="Shirt 5"><p>Shirt 5 <br>price: 50 $</p></div>
+                <div class="box"><img loading="lazy" decoding="async" src="/image/kids/IMG_5036.jpg"     alt="Kids shirt 1"><p>Shirt 1 <br>price: 50 $</p></div>
+                <div class="box"><img loading="lazy" decoding="async" src="/image/kids/IMG_5055.JPG.jpg" alt="Kids shirt 2"><p>Shirt 2 <br>price: 50 $</p></div>
+                <div class="box"><img loading="lazy" decoding="async" src="/image/kids/IMG_5054.JPG.jpg" alt="Kids shirt 3"><p>Shirt 3 <br>price: 50 $</p></div>
+                <div class="box"><img loading="lazy" decoding="async" src="/image/kids/IMG_5044.jpg"     alt="Kids shirt 4"><p>Shirt 4 <br>price: 50 $</p></div>
+                <div class="box"><img loading="lazy" decoding="async" src="/IMG_0532.JPG - Shortcut.lnk"   alt="Kids shirt 5"><p>Shirt 5 <br>price: 50 $</p></div>
             </div>
         </div>
     </section>
@@ -80,6 +86,7 @@
                 <div class="box"><img src="/image/kids/IMG_5047.JPG.jpg" alt="Two-piece 6"><p>Two-piece 6 <br>price: 50 $</p></div>
             </div>
         </div>
+    </section>
     </section>
     <script>
         document.addEventListener('DOMContentLoaded', function() {

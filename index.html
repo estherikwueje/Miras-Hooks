@@ -6,6 +6,7 @@
     <title>Mira's Hooks</title>
     <link rel="stylesheet" href="style.css">
      <link rel="shortcut icon" href="/image/hook.jpg" type="image/x-icon">
+    <link rel="preload" as="image" href="/image/IMG-20251015-WA0004(1)(1).jpg">
 </head>
 <body>
 <nav class="miras">
@@ -33,17 +34,21 @@
 
 <!-- Overlay for closing menu -->
 <div class="overlay" id="overlay" onclick="closeMenu()"></div>
-<h1 class="text">MIRA'S </h1>
-<h1 class="cooked">Hooks</h1>
-<a href="#about"><button class="boy">learn more</button></a>
-<img src="/image/IMG-20251015-WA0004(1)(1).jpg" alt="" width="100%">
-<div id="about">
+<header class="hero">
+    <img loading="lazy" decoding="async" class="hero-img" src="/image/IMG-20251015-WA0004(1)(1).jpg" alt="Mira's Hooks hero">
+    <div class="hero-title">
+        <h1>Mira's<br>Hooks</h1>
+        <a href="#about"><button class="boy">Learn more</button></a>
+    </div>
+</header>
+
+<main id="about">
     <div class="kjd">
     <h1>About me</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam suscipit aliquam temporibus totam eveniet nihil officiis dicta expedita consequatur, inventore ad ducimus dolorem possimus, excepturi a labore sint esse tempora. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus ipsum incidunt ad quam laboriosam, a dolore iure illo quod modi eius doloremque repellendus itaque odit quibusdam, dolorem architecto illum quaerat! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias odio quod laborum accusamus esse harum aliquam, quasi temporibus, magnam hic minus nostrum, aperiam consectetur at maiores. Commodi laborum molestias debitis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis saepe, suscipit commodi nam exercitationem illo voluptatibus enim neque sunt sint debitis adipisci ipsum eius temporibus ipsa pariatur officiis voluptate necessitatibus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto perferendis animi quod corrupti ipsam sunt explicabo quo unde tempore consequuntur reprehenderit ad, alias, provident tenetur est laborum, quos deleniti repellendus! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sint blanditiis est ratione nostrum eligendi! Temporibus dolorum officia delectus accusamus eveniet! Delectus rem molestiae aspernatur illo molestias atque tempore blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatum vero ad commodi recusandae ea blanditiis dolore minima, officia, quis, unde maxime tenetur. Veritatis molestias fugit, nemo ad cupiditate dolores.</p>
     </div>
-    <div class="lop" style="overflow: hidden;"> <img src="/image/IMG-20251103-WA0000.jpg" alt="" width="100%" style="margin-top: -30px;"> </div>
-</div>
+    <div class="lop" style="overflow: hidden;"> <img loading="lazy" decoding="async" src="/image/IMG-20251103-WA0000.jpg" alt="About image" width="100%" style="margin-top: -30px;"> </div>
+</main>
 
 <script>
 function toggleMenu() {

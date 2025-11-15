@@ -172,6 +172,34 @@ color: rgb(165, 42, 42);
 animation: slide 1s forwards;
 }
 
+/* Hero helper for women page */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-title {
+    position: absolute;
+    left: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 10;
+    background: rgba(0, 123, 255, 0.18);
+    color: #003366;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+.hero-title h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+}
+
 /* Tablet styles */
 @media screen and (max-width: 768px) {
     .miras {

@@ -164,13 +164,50 @@ color: #8b4513;
     border-radius: 5px;
 }
 .kid{
-z-index: 1;
-position: absolute;
-top: 10rem;
-font-size: 15rem;
-color: rgb(165, 42, 42);
-animation: slide 1s forwards;
+    z-index: 2;
+    position: absolute;
+    top: 10rem;
+    font-size: 15rem;
+    color: #003366; /* dark blue text */
+    background: rgba(0, 123, 255, 0.18); /* transparent blue background */
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    animation: slide 1s forwards;
 }
+
+.kid-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    object-fit: cover;
+}
+
+/* Hero helper for kids page */
+.hero{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+.hero-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-title{
+    position: absolute;
+    left: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 10;
+    background: rgba(0, 123, 255, 0.18);
+    color: #003366;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+.hero-title h1{ margin:0; font-size:2.5rem; }
 
 /* Tablet styles */
 @media screen and (max-width: 768px) {

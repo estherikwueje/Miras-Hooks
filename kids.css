@@ -189,13 +189,15 @@ color: #8b4513;
 .hero{
     position: relative;
     width: 100%;
-    height: 60vh;
-    overflow: hidden;
+    height: auto; /* allow image to determine height on desktop */
+    overflow: visible; /* don't clip the image */
 }
 .hero-img{
     width: 100%;
-    height: 100%;
+    height: auto; /* maintain aspect ratio */
+    max-height: 80vh; /* avoid extremely tall images */
     object-fit: cover;
+    display: block;
 }
 .hero-title{
     position: absolute;

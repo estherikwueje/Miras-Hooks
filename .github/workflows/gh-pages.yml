@@ -12,6 +12,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Show public dir contents
+        run: |
+          echo "Public dir size:" && du -sh public || true
+          echo "Listing public (top 200 lines):" && ls -la public | sed -n '1,200p' || true
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -19,6 +24,7 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./public
           keep_files: false
+          allow_empty_commit: true
       - name: Cleanup public dir (ensure exists)
         run: |
           mkdir -p public

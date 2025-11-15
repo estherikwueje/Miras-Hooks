@@ -335,6 +335,11 @@ color: #8b4513;
     }
 
     .category {
-        margin-top: 400px;
+        margin-top: 1.5rem;
+    }
+
+    /* Reduce hero height on small screens to tighten spacing */
+    .hero {
+        height: 40vh;
     }
 }
